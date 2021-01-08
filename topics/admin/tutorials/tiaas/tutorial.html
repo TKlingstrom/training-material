@@ -5,20 +5,10 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Training Infrastructure as a Service (TIaaS)</title>
-        
-            <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
-    ga('send', 'pageview');
-</script>
-        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
+        <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
@@ -46,6 +36,8 @@
 
 
 
+<!-- Gitter -->
+
 
 <script>
   ((window.gitter = {}).chat = {}).options = {
@@ -53,7 +45,6 @@
   };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -70,42 +61,45 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/admin" title="Go back to list of tutorials">
-                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Galaxy Server administration
+                            <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">topic</span> Galaxy Server administration
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="EN">
-                            EN
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Language Selector">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Language
                         </a>
                         <div class="dropdown-menu">
                             
                             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Ftiaas%2Ftutorial.html&edit-text=&act=url" title="">
-                                FR
+                                Français
                             </a>
                             
                             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Ftiaas%2Ftutorial.html&edit-text=&act=url" title="">
-                                JA
+                                日本語
                             </a>
                             
                             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Ftiaas%2Ftutorial.html&edit-text=&act=url" title="">
-                                ES
+                                Español
                             </a>
                             
                             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Ftiaas%2Ftutorial.html&edit-text=&act=url" title="">
-                                PT
+                                Português
                             </a>
                             
                             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Ftiaas%2Ftutorial.html&edit-text=&act=url" title="">
-                                AR
+                                العربية
                             </a>
                             
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Ftiaas%2Ftutorial.html&edit-text=&act=url" title="">
+                                And more!
+                            </a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
-        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+        <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
     </a>
     <div class="dropdown-menu dropdown-menu-right">
         <form method="get" action="https://tess.elixir-europe.org/materials">
@@ -118,19 +112,41 @@
         <a class="dropdown-item" href="/training-material/faq" title="Check our FAQ">
             FAQ
         </a>
-        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Chat on Gitter
-        </a>
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
             Discuss on Galaxy Help
         </a>
+
+        <div class="dropdown-item">
+            <div>
+                Theme
+            </div>
+
+            <div id="theme-selector" data-toggle="buttons">
+                <label data-value="default" class="btn btn-secondary">
+                    <input type="radio" name="options" id="default" autocomplete="off"> Default
+                </label>
+                <label data-value="night" class="btn btn-secondary">
+                    <input type="radio" name="options" id="night" autocomplete="off"> Night
+                </label>
+                <label data-value="midnight" class="btn btn-secondary">
+                    <input type="radio" name="options" id="midnight" autocomplete="off"> Midnight
+                </label>
+                <label data-value="rainbow" class="btn btn-secondary">
+                    <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
+                </label>
+            </div>
+
+        </div>
     </div>
 </li>
 
 
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/admin/tutorials/tiaas/tutorial.md">
-                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
+                            <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
                 </ul>
@@ -307,7 +323,21 @@
     },
     {
       "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html",
+      "url": "https://training.galaxyproject.org//training-material/topics/admin/tutorials/pulsar/slides.html",
+      "name": "Running Jobs on Remote Resources with Pulsar",
+      "description": "Slides for 'Running Jobs on Remote Resources with Pulsar' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/admin/tutorials/pulsar/tutorial.html",
       "name": "Running Jobs on Remote Resources with Pulsar",
       "description": "Hands-on for 'Running Jobs on Remote Resources with Pulsar' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -360,13 +390,13 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
+<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
 
 </div>
 
         <blockquote class="overview">
             <h3>Overview</h3>
-            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <strong><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
             <ul>
             
             <li><p>How to deploy EU’s TIaaS</p>
@@ -374,7 +404,7 @@
             
             </ul>
 
-            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <strong><i class="fas fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
             <li><p>Setup TIaaS</p>
@@ -389,7 +419,7 @@
             </ul>
 
             
-            <strong><i class="fa fa-check-circle" aria-hidden="true"></i><span class="visually-hidden">requirements</span> Requirements</strong>
+            <strong><i class="fas fa-check-circle" aria-hidden="true"></i><span class="visually-hidden">requirements</span> Requirements</strong>
             <ul>
             
             
@@ -410,12 +440,12 @@
                             
                             <li> Ansible:
                             
-                                <a href="/training-material/topics/admin/tutorials/ansible/slides.html"><i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
+                                <a href="/training-material/topics/admin/tutorials/ansible/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
                                 
                             
                             
                                 
-                                    - <a href="/training-material/topics/admin/tutorials/ansible/tutorial.html"><i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                    - <a href="/training-material/topics/admin/tutorials/ansible/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
                                 
                             
                             </li>
@@ -481,9 +511,13 @@
                     
                         
                     
-                
+                        
                     
                         
+                    
+                        
+                    
+                
                     
                         
                     
@@ -517,15 +551,23 @@
                             
                             <li> Galaxy Installation with Ansible:
                             
-                                <a href="/training-material/topics/admin/tutorials/ansible-galaxy/slides.html"><i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
+                                <a href="/training-material/topics/admin/tutorials/ansible-galaxy/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
                                 
                             
                             
                                 
-                                    - <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html"><i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                    - <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
                                 
                             
                             </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                         
@@ -576,12 +618,12 @@
                             
                             <li> Connecting Galaxy to a compute cluster:
                             
-                                <a href="/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html"><i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
+                                <a href="/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
                                 
                             
                             
                                 
-                                    - <a href="/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html"><i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                    - <a href="/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
                                 
                             
                             </li>
@@ -643,7 +685,19 @@
                     
                         
                     
+                        
+                    
+                        
+                    
+                        
+                    
                 
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -701,9 +755,12 @@
                             
                             <li> Running Jobs on Remote Resources with Pulsar:
                             
+                                <a href="/training-material/topics/admin/tutorials/pulsar/slides.html"><i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides</a>
+                                
+                            
                             
                                 
-                                     <a href="/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html"><i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                    - <a href="/training-material/topics/admin/tutorials/pulsar/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
                                 
                             
                             </li>
@@ -731,7 +788,7 @@
             
 
             
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            <p><strong><i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
             
 
             
@@ -744,14 +801,11 @@
             <ul>
                 <div class="supporting_material">
                 
-                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/admin/slides/introduction.html" title="Introduction slides">
-                        <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Introduction slides
+                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/admin/slides/introduction.html" title="Topic Overview slides">
+                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Topic Overview slides
                     </a></li>
                 
 
-                
-                    <li class="btn btn-default supporting_material">
-</li>
                 
 
                 
@@ -763,7 +817,7 @@
             </ul>
             
 
-            <p><strong> <i class="fa fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 12, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Mar 5, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -799,11 +853,11 @@ resources, thus reducing queue times on the day of the training.</p>
 <h1 id="setting-up-tiaas">Setting up TIaaS</h1>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-setup-tiaas"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Setup TIaaS</h3>
+  <h3 id="hands_on-hands-on-setup-tiaas"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Setup TIaaS</h3>
 
   <ol>
     <li>
-      <p>In your <code class="highlighter-rouge">requirements.yml</code> add the TIaaS ansible role:</p>
+      <p>In your <code class="language-plaintext highlighter-rouge">requirements.yml</code> add the TIaaS ansible role:</p>
 
       <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">use<span class="notranslate">galaxy</span>_eu.tiaas2</span>
   <span class="na">version</span><span class="pi">:</span> <span class="s">0.0.1</span>
@@ -811,11 +865,11 @@ resources, thus reducing queue times on the day of the training.</p>
 
       <p>And run the install step:</p>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-<span class="notranslate">galaxy</span> install -p roles -r requirements.yml
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-<span class="notranslate">galaxy</span> install -p roles -r requirements.yml
 </code></pre></div>      </div>
     </li>
     <li>
-      <p>In your <code class="highlighter-rouge"><span class="notranslate">galaxy</span>servers</code> group variables file, add the following:</p>
+      <p>In your <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>servers</code> group variables file, add the following:</p>
 
       <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TIaaS setup</span>
 <span class="na">tiaas_dir</span><span class="pi">:</span> <span class="s">/opt/tiaas</span>
@@ -827,7 +881,7 @@ resources, thus reducing queue times on the day of the training.</p>
 </code></pre></div>      </div>
     </li>
     <li>
-      <p>In the <code class="highlighter-rouge"><span class="notranslate">galaxy</span>servers</code> group variables file, we also need to set the database permissions correctly for TIaaS. It needs to be able to access some <span class="notranslate">Galaxy</span> tables, and we will carefully define only the ones we really need:</p>
+      <p>In the <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>servers</code> group variables file, we also need to set the database permissions correctly for TIaaS. It needs to be able to access some <span class="notranslate">Galaxy</span> tables, and we will carefully define only the ones we really need:</p>
 
       <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gi">+++ group_vars/<span class="notranslate">galaxy</span>servers.yml
 </span> postgresql_objects_users:
@@ -857,7 +911,7 @@ resources, thus reducing queue times on the day of the training.</p>
 </span></code></pre></div>      </div>
     </li>
     <li>
-      <p>We need to add the <code class="highlighter-rouge">use<span class="notranslate">galaxy</span>_eu.tiaas2</code> role to the end of the playbook (<code class="highlighter-rouge"><span class="notranslate">galaxy</span>.yml</code>)</p>
+      <p>We need to add the <code class="language-plaintext highlighter-rouge">use<span class="notranslate">galaxy</span>_eu.tiaas2</code> role to the end of the playbook (<code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>.yml</code>)</p>
     </li>
     <li>
       <p>Lastly we should add the routes for TIaaS to the NGINX template for <span class="notranslate">Galaxy</span>:</p>
@@ -882,7 +936,7 @@ resources, thus reducing queue times on the day of the training.</p>
 </code></pre></div>      </div>
     </li>
     <li>
-      <p>Run the playbook (<code class="highlighter-rouge">ansible-playbook -i hosts <span class="notranslate">galaxy</span>.yml</code>)</p>
+      <p>Run the playbook (<code class="language-plaintext highlighter-rouge">ansible-playbook <span class="notranslate">galaxy</span>.yml</code>)</p>
     </li>
   </ol>
 
@@ -910,6 +964,16 @@ resources, thus reducing queue times on the day of the training.</p>
       <td>Admin</td>
     </tr>
     <tr>
+      <td style="text-align: left">https://&lt;server&gt;/tiaas/stats/</td>
+      <td>Overall TIaaS statistics (<a href="https://usegalaxy.eu/tiaas/stats/">EU Stats</a>)</td>
+      <td>Admins, Funding Agencies</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">https://&lt;server&gt;/tiaas/calendar/</td>
+      <td>Calendar of trainings (<a href="https://usegalaxy.eu/tiaas/calendar/">EU Calendar</a>)</td>
+      <td>Admins, Funding Agencies</td>
+    </tr>
+    <tr>
       <td style="text-align: left">https://&lt;server&gt;/join-training/&lt;training-id&gt;</td>
       <td>Join an TIaaS training</td>
       <td>Participants</td>
@@ -925,7 +989,7 @@ resources, thus reducing queue times on the day of the training.</p>
 <p>Let’s see it in action!</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-using-tiaas"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Using TIaaS</h3>
+  <h3 id="hands_on-hands-on-using-tiaas"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Using TIaaS</h3>
 
   <ol>
     <li><strong>Create a new TIaaS request</strong>
@@ -933,9 +997,9 @@ resources, thus reducing queue times on the day of the training.</p>
         <li>Go to https://&lt;server&gt;/tiaas/new/</li>
         <li>Here you will find the request form users will fill in to request TIaaS:
 <img src="../../images/tiaas/tiaas_request_form.png" alt="TIaaS request form" /></li>
-        <li>For <em>“Training Identifier”</em>, fill in <code class="highlighter-rouge">gryffindor</code> (or remember this value if you enter something different)
+        <li>For <em>“Training Identifier”</em>, fill in <code class="language-plaintext highlighter-rouge">gryffindor</code> (or remember this value if you enter something different)
           <ul>
-            <li>This is the <code class="highlighter-rouge">&lt;training-id&gt;</code> used in the URLs listed above used for:
+            <li>This is the <code class="language-plaintext highlighter-rouge">&lt;training-id&gt;</code> used in the URLs listed above used for:
               <ol>
                 <li>Workshop participants to join the tiaas group</li>
                 <li>Workshop instructors to monitor the progress of their participants.</li>
@@ -952,9 +1016,9 @@ resources, thus reducing queue times on the day of the training.</p>
       <ul>
         <li>Next, the request will have to be approved by an admin</li>
         <li>Go to https://&lt;server&gt;/tiaas/admin</li>
-        <li><strong>Log in</strong> using the values you configured <code class="highlighter-rouge">tiaas_admin_user</code> and <code class="highlighter-rouge">tiaas_admin_pass</code> in your group variables file
+        <li><strong>Log in</strong> using the values you configured <code class="language-plaintext highlighter-rouge">tiaas_admin_user</code> and <code class="language-plaintext highlighter-rouge">tiaas_admin_pass</code> in your group variables file
           <ul>
-            <li>Default values were <code class="highlighter-rouge">admin:changme</code></li>
+            <li>Default values were <code class="language-plaintext highlighter-rouge">admin:changeme</code></li>
           </ul>
         </li>
         <li>You should now see the admin panel:
@@ -965,7 +1029,7 @@ resources, thus reducing queue times on the day of the training.</p>
           <ul>
             <li>Click on the training</li>
             <li>Scroll down to the bottom</li>
-            <li>Change <em>“Processed”</em> to <code class="highlighter-rouge">Approved</code> and <strong>Save</strong>
+            <li>Change <em>“Processed”</em> to <code class="language-plaintext highlighter-rouge">Approved</code> and <strong>Save</strong>
 <img src="../../images/tiaas/tiaas_request_approve.png" alt="Approve TIaaS" /></li>
           </ul>
         </li>
@@ -1004,7 +1068,7 @@ resources, thus reducing queue times on the day of the training.</p>
 </blockquote>
 
 <blockquote class="comment">
-  <h3 id="comment-note-gdpr-assistance"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Note: GDPR assistance</h3>
+  <h3 id="comment-note-gdpr-assistance"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Note: GDPR assistance</h3>
 
   <p>Since this setup tracks additional personal information (submitter name &amp; email, users in the queue view), TIaaS includes some always-on features to assist with your GDPR compliance.</p>
 
@@ -1024,11 +1088,11 @@ resources, thus reducing queue times on the day of the training.</p>
 <p>In order to achieve this, we first need some way to <em>sort</em> the jobs of the training users into these private queues, while letting the other jobs continue on. So let’s create a <em>sorting hat</em> to figure out where jobs belong.</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-writing-a-dynamic-job-destination"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Writing a dynamic job destination</h3>
+  <h3 id="hands_on-hands-on-writing-a-dynamic-job-destination"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Writing a dynamic job destination</h3>
 
   <ol>
     <li>
-      <p>Create and open <code class="highlighter-rouge">files/<span class="notranslate">galaxy</span>/dynamic_job_rules/hogwarts.py</code></p>
+      <p>Create and open <code class="language-plaintext highlighter-rouge">files/<span class="notranslate">galaxy</span>/dynamic_job_rules/hogwarts.py</code></p>
 
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn"><span class="notranslate">galaxy</span>.jobs</span> <span class="kn">import</span> <span class="n">JobDestination</span>
 <span class="kn">from</span> <span class="nn"><span class="notranslate">galaxy</span>.jobs.mapper</span> <span class="kn">import</span> <span class="n">Job<span class="notranslate">Mapping</span>Exception</span>
@@ -1037,21 +1101,21 @@ resources, thus reducing queue times on the day of the training.</p>
 <span class="k">def</span> <span class="nf">sorting_hat</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
     <span class="c1"># Check that the user is not anonymous
 </span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">user</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">job_config</span><span class="o">.</span><span class="n">get_destination</span><span class="p">(</span><span class="s">'slurm'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">app</span><span class="p">.</span><span class="n">job_config</span><span class="p">.</span><span class="n">get_destination</span><span class="p">(</span><span class="s">'slurm'</span><span class="p">)</span>
 
     <span class="c1"># Collect the user's roles
-</span>    <span class="n">user_roles</span> <span class="o">=</span> <span class="p">[</span><span class="n">role</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">all_roles</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">role</span><span class="o">.</span><span class="n">deleted</span><span class="p">]</span>
+</span>    <span class="n">user_roles</span> <span class="o">=</span> <span class="p">[</span><span class="n">role</span><span class="p">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">user</span><span class="p">.</span><span class="n">all_roles</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">role</span><span class="p">.</span><span class="n">deleted</span><span class="p">]</span>
 
     <span class="c1"># If any of these are prefixed with 'training-'
-</span>    <span class="k">if</span> <span class="nb">any</span><span class="p">([</span><span class="n">role</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'training-'</span><span class="p">)</span> <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">user_roles</span><span class="p">]):</span>
+</span>    <span class="k">if</span> <span class="nb">any</span><span class="p">([</span><span class="n">role</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'training-'</span><span class="p">)</span> <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">user_roles</span><span class="p">]):</span>
         <span class="c1"># Then they are a training user, we will send their jobs to pulsar,
 </span>        <span class="c1"># Or give them extra resources
-</span>        <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">job_config</span><span class="o">.</span><span class="n">get_destination</span><span class="p">(</span><span class="s">'slurm-2c'</span><span class="p">)</span> <span class="c1"># or pulsar, if available
+</span>        <span class="k">return</span> <span class="n">app</span><span class="p">.</span><span class="n">job_config</span><span class="p">.</span><span class="n">get_destination</span><span class="p">(</span><span class="s">'slurm-2c'</span><span class="p">)</span> <span class="c1"># or pulsar, if available
 </span>
-    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">job_config</span><span class="o">.</span><span class="n">get_destination</span><span class="p">(</span><span class="s">'slurm'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">app</span><span class="p">.</span><span class="n">job_config</span><span class="p">.</span><span class="n">get_destination</span><span class="p">(</span><span class="s">'slurm'</span><span class="p">)</span>
 </code></pre></div>      </div>
 
-      <p>This destination will check that the <code class="highlighter-rouge">user_email</code> is in a training group (role starting with <code class="highlighter-rouge">training-</code>).</p>
+      <p>This destination will check that the <code class="language-plaintext highlighter-rouge">user_email</code> is in a training group (role starting with <code class="language-plaintext highlighter-rouge">training-</code>).</p>
     </li>
     <li>
       <p>As usual, we need to instruct <span class="notranslate">Galaxy</span> of where to find this file:</p>
@@ -1068,7 +1132,7 @@ resources, thus reducing queue times on the day of the training.</p>
       </ul>
     </li>
     <li>
-      <p>We next need to configure this plugin in our job configuration (<code class="highlighter-rouge">files/<span class="notranslate">galaxy</span>/config/job_conf.xml</code>):</p>
+      <p>We next need to configure this plugin in our job configuration (<code class="language-plaintext highlighter-rouge">files/<span class="notranslate">galaxy</span>/config/job_conf.xml</code>):</p>
 
       <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;destination</span> <span class="na">id=</span><span class="s">"sorting_hat"</span> <span class="na">runner=</span><span class="s">"dynamic"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;param</span> <span class="na">id=</span><span class="s">"type"</span><span class="nt">&gt;</span>python<span class="nt">&lt;/param&gt;</span>
@@ -1076,10 +1140,10 @@ resources, thus reducing queue times on the day of the training.</p>
 <span class="nt">&lt;/destination&gt;</span>
 </code></pre></div>      </div>
 
-      <p>This is a <strong>Python function dynamic destination</strong>. <span class="notranslate">Galaxy</span> will load all python files in the <code class="highlighter-rouge">{{ <span class="notranslate">galaxy</span>_dynamic_rule_dir }}</code>, and all functions defined in those will be available to be used in the <code class="highlighter-rouge">job_conf.xml</code></p>
+      <p>This is a <strong>Python function dynamic destination</strong>. <span class="notranslate">Galaxy</span> will load all python files in the <code class="language-plaintext highlighter-rouge">{{ <span class="notranslate">galaxy</span>_dynamic_rule_dir }}</code>, and all functions defined in those will be available to be used in the <code class="language-plaintext highlighter-rouge">job_conf.xml</code></p>
     </li>
     <li>
-      <p>Again In <code class="highlighter-rouge">job_conf.xml</code>, update the top level <code class="highlighter-rouge">&lt;destinations&gt;</code> definition and point it to the sorting hat:</p>
+      <p>Again In <code class="language-plaintext highlighter-rouge">job_conf.xml</code>, update the top level <code class="language-plaintext highlighter-rouge">&lt;destinations&gt;</code> definition and point it to the sorting hat:</p>
 
       <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;destinations</span> <span class="na">default=</span><span class="s">"sorting_hat"</span><span class="nt">&gt;</span>
 ...
@@ -1102,7 +1166,7 @@ resources, thus reducing queue times on the day of the training.</p>
       <p>Ensure your user is joined to a training</p>
     </li>
     <li>
-      <p>Run a job and observe the logs to see where it goes (<code class="highlighter-rouge">jou<span class="notranslate">rna</span>lctf -u <span class="notranslate">galaxy</span> -f</code>)</p>
+      <p>Run a job and observe the logs to see where it goes (<code class="language-plaintext highlighter-rouge">jou<span class="notranslate">rna</span>lctl -u <span class="notranslate">galaxy</span> -f</code>)</p>
     </li>
   </ol>
 
@@ -1113,7 +1177,7 @@ resources, thus reducing queue times on the day of the training.</p>
 
                     
                     <blockquote class="key_points">
-                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+                        <h3><i class="fas fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
                         <ul>
                             
                             <li><p>TIaaS is an additional service you can deploy which can help you provide a better service to your users</p>
@@ -1126,6 +1190,39 @@ resources, thus reducing queue times on the day of the training.</p>
                     
 
                     
+
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Training Infrastructure as a Service (TIaaS) (Galaxy Server administration)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
 
                     <h1>Citing this Tutorial</h1>
                     <p>
@@ -1148,8 +1245,8 @@ resources, thus reducing queue times on the day of the training.</p>
     author = "Helena Rasche and Saskia Hiltemann",
     title = "Training Infrastructure as a Service (TIaaS) (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "12"
+    month = "03",
+    day = "05"
     url = "\url{/training-material/topics/admin/tutorials/tiaas/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1182,23 +1279,11 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
             </div>
         </div>
 
-        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
 
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Training Infrastructure as a Service (TIaaS) (Galaxy Server administration)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Training Infrastructure as a Service (TIaaS) (Galaxy Server administration)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1214,6 +1299,9 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
             Found a typo? Something is wrong in this tutorial? Edit it on
             <a href="https://github.com/galaxyproject/training-material/tree/master/topics/admin/tutorials/tiaas/tutorial.md">GitHub</a>.
         </p>
+        <p>
+    The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+</p>
     </div>
 </footer>
 
@@ -1225,6 +1313,7 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
 
     <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
     <script type="text/javascript">
@@ -1238,4 +1327,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>
