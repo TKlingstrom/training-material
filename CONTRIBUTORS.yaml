@@ -153,6 +153,11 @@ bphipson:
     name: Belinda Phipson
     joined: 2018-09
 
+cat-bro:
+    name: Catherine Bromhead
+    gitter: cat-bro
+    joined: 2019-12
+
 cecilecanlet:
     name: Cécile Canlet
     github: false
@@ -180,6 +185,13 @@ cmonjeau:
     name: Cyril Monjeaud
     joined: 2017-09
 
+colineroyaux:
+    name: Coline Royaux
+    email: coline.royaux@mnhn.fr
+    twitter: ColineRoyaux
+    orcid: 0000-0003-4308-5617
+    joined: 2020-11
+
 combesf:
     name: Florence Combes
     email: florence.combes@cea.fr
@@ -198,6 +210,9 @@ daltis20012009:
     name: Krzys Poterlowicz
     github: false
     joined: 2017-09
+
+danielabutano:
+    name: Daniela Butano
 
 dannon:
     name: Dannon Baker
@@ -298,6 +313,10 @@ friedue:
     name: Friederike Dündar
     joined: 2017-09
 
+gallardoalba:
+    name: Cristóbal Gallardo
+    joined: 2020-11
+
 gmauro:
     name: Gianmauro Cuccuru
     joined: 2019-03
@@ -334,6 +353,10 @@ ic4f:
 igcbioinformatics:
     name: IGC Bioinformatics Unit
     joined: 2018-12
+
+j34ni:
+    name: Jean Iaquinta
+    joined: 2020-10
 
 jennaj:
     name: Jennifer Hillman-Jackson
@@ -446,10 +469,19 @@ manabuishii:
     name: Manabu ISHII
     joined: 2017-09
 
+mariecrane:
+    name: Marie Crane
+    joined: 2019-05
+    email: crane136@umn.edu
+
 martenson:
     name: Martin Čech
     email: marten@bx.psu.edu
     joined: 2017-09
+
+MarenStillger:
+    name: Maren Stillger
+    joined: 2020-10
 
 marziacremona:
     name: Marzia A Cremona
@@ -600,6 +632,10 @@ r1corre:
     orcid: 0000-0001-6354-2278
     joined: 2019-04
 
+rosiealice:
+    name: Rosie Fisher
+    joined: 2020-10
+
 reginaesinamabotsi:
     name: Regina Esinam Abotsi
     joined: 2018-06
@@ -700,6 +736,10 @@ torhou:
     name: Torsten Houwaart
     joined: 2017-09
 
+torfinnnome:
+    name: Torfinn Nome
+    joined: 2021-01
+
 tseemann:
     name: Torsten Seemann
     joined: 2018-06
@@ -765,6 +805,9 @@ yguitton:
 yhoogstrate:
     name: Youri Hoogstrate
     joined: 2017-09
+
+yochannah:
+    name: Yo Yehudi
 
 yvandenb:
     name: Yves Vandenbrouck
